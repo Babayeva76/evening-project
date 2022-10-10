@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'common-styles';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1850px;
+  margin: 0 auto;
+}
+
+.narrow-container {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+}

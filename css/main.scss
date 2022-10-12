@@ -1,5 +1,143 @@
 @import 'variables';
 @import 'common-styles';
+@import 'mixins';
+
+main a {
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  color: $font-color;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-block {
+  padding-top: 100px;
+  margin-bottom: 120px;
+
+  h1 {
+    position: relative;
+  }
+
+  img {
+    margin-top: -88px;
+  }
+
+  .inner-container {
+    @include flex-between(center);
+    margin-top: -42px;
+  }
+
+  p {
+    font-family: $secondary-font;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.03em;
+  }
+
+  a {
+    color: $accent-color;
+  }
+
+  path {
+    stroke: $accent-color;
+  }
+}
+
+.about-us {
+  @include flex-between;
+
+  p {
+    font-family: $secondary-font;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 100px;
+  }
+
+  .two-images-and-text {
+    @include flex-between;
+  }
+
+  .about-us-card {
+    width: 370px;
+    height: 450px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:last-child {
+      @include flex-between;
+      flex-direction: column;
+      padding-left: 50px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+.catalog {
+  .catalog-grid {
+    display: grid;
+    gap: 0 35px;
+    grid-template-areas:
+        "w1 w1 ."
+        "w1 w1 s1"
+        ". . s1"
+        "e1 e1 e1"
+        ". w2 w2"
+        "s2 w2 w2"
+        "s2 . ."
+        "e2 e2 e2"
+        "s3 s4 s5"
+        "s3 s4 s5";
+  }
+
+  .grid-item:nth-child(1) {
+    grid-area: w1;
+  }
+
+  .grid-item:nth-child(2) {
+    grid-area: s1;
+  }
+
+  .grid-item:nth-child(3) {
+    grid-area: e1;
+    min-height: 154px;
+  }
+
+  .grid-item:nth-child(4) {
+    grid-area: s2;
+  }
+
+  .grid-item:nth-child(5) {
+    grid-area: w2;
+  }
+
+  .grid-item:nth-child(6) {
+    grid-area: e2;
+    min-height: 154px;
+  }
+
+  .grid-item:nth-child(7) {
+    grid-area: s3;
+  }
+
+  .grid-item:nth-child(8) {
+    grid-area: s4;
+  }
+
+  .grid-item:nth-child(9) {
+    grid-area: s5;
+  }
+}
 
 .animated-line {
   margin: 280px 0;

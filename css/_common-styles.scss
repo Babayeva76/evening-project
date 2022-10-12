@@ -1,3 +1,4 @@
+@import 'variables';
 @import 'mixins';
 
 * {
@@ -8,6 +9,21 @@ body {
   font-family: $main-font;
   margin: 0;
   background-color: $main-background;
+  color: $font-color;
+}
+
+h1 {
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 117px;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
 }
 
 .container {
@@ -22,6 +38,11 @@ body {
   margin: 0 auto;
 }
 
+.inner-container {
+  max-width: 1150px;
+  margin-left: auto;
+}
+
 header {
   position: sticky;
   background-color: white;
@@ -33,19 +54,14 @@ header {
 
   nav {
     display: flex;
+    gap: 50px;
   }
 
   .nav-link {
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.03em;
-    color: black;
+    color: $font-color;
     text-decoration: none;
-    margin-right: 50px;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
-
 }

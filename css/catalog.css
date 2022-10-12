@@ -1,1 +1,64 @@
-/*# sourceMappingURL=catalog.css.map */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: #F7F7F7;
+  color: black;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 117px;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1850px;
+  margin: 0 auto;
+}
+
+.narrow-container {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.inner-container {
+  max-width: 1150px;
+  margin-left: auto;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+}
+header .narrow-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+}
+header nav {
+  display: flex;
+  gap: 50px;
+}
+header .nav-link {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: black;
+  text-decoration: none;
+}/*# sourceMappingURL=catalog.css.map */

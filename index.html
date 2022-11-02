@@ -7,26 +7,31 @@
   <title>YETI Sports</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
   <header>
     <div class="narrow-container">
       <img src="./assets/logo.svg" alt="Our logo">
-      <nav>
+      <nav class="desktop-only">
         <a href="#" class="nav-link">О МАГАЗИНЕ</a>
         <a href="#" class="nav-link">КАТАЛОГ</a>
         <a href="#" class="nav-link">КОНТАКТЫ</a>
         <a href="#" class="nav-link">ЛИЧНЫЙ КАБИНЕТ</a>
         <a href="#" class="nav-link">КОРЗИНА (<span id="goods-count">0</span>)</a>
       </nav>
+      <button class="burger-menu mobile-only">burger</button>
     </div>
   </header>
   <main>
     <div class="hero-block container">
-      <h1 class="narrow-container">ТЕХНОЛОГИЧНАЯ<br>ОДЕЖДА ДЛЯ ЗИМНЕГО<br>СПОРТА</h1>
-      <img src="./assets/hero-photo.png" alt="hero-image">
+      <h1 class="narrow-container">ТЕХНОЛОГИЧНАЯ<br>ОДЕЖДА <br class="mobile-only" />ДЛЯ ЗИМНЕГО<br>СПОРТА</h1>
+      <picture class="about-us-img">
+        <source srcset="./assets/hero-image-mobile.png" media="(max-width: 900px)">
+        <source srcset="./assets/hero-photo.png">
+        <img srcset="./assets/hero-photo.png" alt="hero-image">
+      </picture>
       <div class="narrow-container">
         <div class="inner-container">
           <p>НОВАЯ СНОУБОРДИЧЕСКАЯ<br>КОЛЛЕКЦИЯ</p>
@@ -40,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="about-us narrow-container">
+    <div class="about-us narrow-container desktop-only">
       <h2>О НАС</h2>
       <div class="about-us-content inner-container">
         <p>YETI — новый магазин одежды для сноубордистов. В нашем магазине вы найдете только самые последние модели, которые производятся по современным технологиям
@@ -55,42 +60,81 @@
         </div>
       </div>
     </div>
-    <div class="catalog container">
+    <div class="catalog container desktop-only">
       <h2>КАТАЛОГ</h2>
       <div class="catalog-grid">
         <div class="grid-item wide">
           <img src="./assets/Rectangle 27.png" alt="">
+          <a href="#">СНОУБОРДЫ <img src="./assets/arrow.svg" alt="arrow"></a>
         </div>
         <div class="grid-item small">
           <img src="./assets/Rectangle 28.png" alt="">
+          <a href="#">КРЕПЛЕНИЯ <img src="./assets/arrow.svg" alt="arrow"></a>
         </div>
         <div class="grid-item empty"></div>
         <div class="grid-item small">
           <img src="./assets/Rectangle 29.png" alt="">
+          <a href="#">БОТИНКИ <img src="./assets/arrow.svg" alt="arrow"></a>
         </div>
         <div class="grid-item wide">
           <img src="./assets/Rectangle 31.png" alt="">
+          <a href="#">ОДЕЖДА <img src="./assets/arrow.svg" alt="arrow"></a>
         </div>
         <div class="grid-item empty"></div>
         <div class="grid-item small">
           <img src="./assets/Rectangle 32.png" alt="">
+          <a href="#">МАСКИ <img src="./assets/arrow.svg" alt="arrow"></a>
         </div>
         <div class="grid-item small">
           <img src="./assets/Rectangle 33.png" alt="">
+          <a href="#">ШЛЕМЫ И ЗАЩИТА <img src="./assets/arrow.svg" alt="arrow"></a>
         </div>
         <div class="grid-item small">
           <img src="./assets/Rectangle 34.png" alt="">
+          <a href="#">АКСЕССУАРЫ <img src="./assets/arrow.svg" alt="arrow"></a>
         </div>
       </div>
     </div>
-    <div class="animated-line"></div>
-    <div class="bestsellers"></div>
+    <div class="animated-line desktop-only">
+      <div class="yeti-line"><span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> </div>
+      <div class="yeti-line rotated-line"><span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> </div>
+    </div>
+    <div class="bestsellers desktop-only">
+      <div class="bestsellers-left">
+        <h2>ХИТЫ ПРОДАЖ</h2>
+        <p>Наилучшее качество материалов, новинки товаров и последние тренды разных стран</p>
+        <div class="buttons-bar">
+          <button class="carousel-button left" disabled="true" onclick="handleCarouselButtonClick(-1)">left</button>
+          <button class="carousel-button right" onclick="handleCarouselButtonClick(1)">right</button>
+        </div>
+      </div>
+      <div class="bestsellers-right"></div>
+    </div>
     <div class="musical-player container"></div>
     <div class="popular-brands narrow-container"></div>
-    <div class="animated-line"></div>
+    <div class="animated-line desktop-only">
+      <div id="first-line"><span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> </div>
+      <div id="second-line" class="rotated-line"><span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> <span>YETI</span> </div>
+    </div>
     <div class="nice-photo"></div>
     <div class="socials narrow-container"></div>
   </main>
-  <footer class="narrow-container"></footer>
+  <footer class="narrow-container">
+    <button class="funny-button" onclick="handleFunnyButtonClick()">just for fun</button>
+  </footer>  
+
+  <script>
+    const firstLineElem = document.getElementById('first-line');
+    const secondLineElem = document.getElementById('second-line');
+    setInterval(() => {
+      const firstChild = firstLineElem.children[0];
+      firstLineElem.appendChild(firstChild);
+      const secondChild = secondLineElem.children[0];
+      secondLineElem.appendChild(secondChild);
+    }, 3000);
+  </script>
+
+  <script src="./first.js"></script>
+  <!-- <script src="./second.js"></script> -->
 </body>
 </html>
